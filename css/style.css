@@ -167,6 +167,8 @@ a {
     color: #333333;
 }
 
+/* Special */
+
 .special {
     margin-top: 70px;
 }
@@ -240,17 +242,22 @@ a {
 	background: url("../icons/right_icon.svg") right center / 11px 11px no-repeat;
 }
 
+/* About */
+
 .about {
     margin-top: 70px;
 }
 
 .about__descr {
     padding: 0 8px;
+    padding-right: 290px;
     font-size: 16px;
     line-height: 200%;
     font-weight: normal;
     color: #000000;
 }
+
+/* Attendance */
 
 .attendance {
     margin-top: 70px;
@@ -292,6 +299,8 @@ a {
     line-height: 200%;
 }
 
+/* Adventages */
+
 .advantages {
     margin-top: 70px;
 }
@@ -299,8 +308,8 @@ a {
 .advantages__list {
     display: grid;
     grid-template-columns: repeat(4, 275px);
-    grid-template-rows: repeat(2, 275px);
-    grid-auto-rows: 275px;
+    grid-template-rows: repeat(2, minmax(275px, auto));
+    grid-auto-rows: minmax(275px, auto);
     gap: 23px;
 }
 
@@ -316,6 +325,8 @@ a {
     line-height: 200%;
     font-weight: normal;
 }
+
+/* Placement */
 
 .placement {
     margin-top: 70px;
@@ -380,6 +391,10 @@ a {
     position: relative;
 }
 
+.placement__item_last img {
+    height: 100%;
+}
+
 .placement__link {
     position: absolute;
     width: 280px;
@@ -391,4 +406,239 @@ a {
     color: #FFFFFF;
     padding-right: 20px;
 	background: url("../icons/right-white_icon.svg") right center / 11px no-repeat;
+}
+
+/* Tour */
+
+.tour {
+    margin-top: 70px;   
+}
+
+.tour__container {
+    background: #E9E9E9;
+    border-radius: 15px;
+    padding: 40px 0 71px 0;
+}
+
+.tour__form {
+    margin: 0 45px;
+    padding: 31px 28px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.form__item:not(:first-child) {
+    margin-left: 20px;
+}
+
+.form__item-date {
+    padding-top: 5px;
+}
+
+label {
+    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #000000;
+}
+
+input, select {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Muller';
+    font-size: 16px;
+    line-height: 1;
+    color: #000000;
+    padding-bottom: 1px;
+}
+
+select {
+    transform: translateX(-5px);
+}
+
+.search__btn {
+    margin-left: 20px;
+    padding: 13px 30px;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#date {
+    padding-bottom: 7px;
+}
+
+#cities, #countries {
+    width: 170px;
+}
+
+#date, #nights, #tourists {
+    width: 121px;
+}
+
+#nights, #tourists {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+::-webkit-calendar-picker-indicator{
+    margin-left: 5px;
+    transform: translateY(-1px);
+}
+
+/* Contacts */
+
+.contacts {
+    margin-top: 70px;
+}
+
+.contacts__grid {
+    padding: 44px 44px 46px 46px;
+    justify-content: space-between;
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.contacts__info {
+    width: 375px;
+    margin-right: 50px;
+}
+
+.contacts__divider {
+    width: 100%;
+    height: 1px;
+    background: #C4C4C4;
+    margin: 25px 0;
+}
+
+.contacts__item {
+    display: flex;
+}
+
+.contacts__info-title {
+    width: 40%;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    color: #000;
+}
+
+.contacts__info-subtitle {
+    margin-left: 0;
+    width: 249px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style:unset;
+}
+
+.contacts__info-subtitle span {
+    line-height: 1;
+    color: #999999;
+}
+
+.contacts__link {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.contacts__btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 27px 29px;
+    font-weight: 700;
+}
+
+.contacts__img {
+    max-width: 653px;
+    max-height: 528px;
+}
+
+/* Footer */
+
+.footer {
+    margin: 20px 0;
+}
+
+.footer__grid {
+    position: relative;
+    padding: 44px 336px 46px 52px;
+    background: #333333;
+    border-radius: 15px;
+    display: grid;
+    grid-template: repeat(3, minmax(50px, auto)) / 320px minmax(360px, auto);
+    column-gap: 70px;
+    row-gap: 13px;
+}
+
+.footer__item {
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.footer__link {
+    display: block;
+    color: var(--main-color);
+}
+
+.footer__item-agreement {
+    padding-top: 30px;
+}
+
+.footer__address {
+    font-style: unset;
+}
+
+.footer__logo {
+    position: absolute;
+    bottom: 0;
+    right: 210px;
+    width: 254px;
+    height: 228px;
+}
+
+.footer__img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer__social {
+    position: absolute;
+    right: 50px;
+    top: 51px;
+}
+
+.footer__social-item {
+    width: 25px;
+    height: 25px;
+}
+
+.footer__social-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.footer__social-icon {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
 }

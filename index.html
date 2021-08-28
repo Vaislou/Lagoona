@@ -169,9 +169,9 @@
                     </div>
                     <div class="advantages__item">
                         <img src="/icons/swimming-pool_icon.svg" alt="Swimming Pool" class="advantages__icon">
-                        <p class="advantages__descr">
+                        <div class="advantages__descr">
                             Значимость этого настолько очевидна, что консультация наших экспертов помогает
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -365,6 +365,181 @@
                 </div>
             </div>
         </section>
+
+        <section class="tour">
+            <div class="container tour__container">
+                <h2 class="section__title">
+                    Хочу тур
+                </h2>
+
+                <form action="https://jsonplaceholder.typicode.com/posts" class="tour__form" name="form" method="POST" id="form">
+                    <div class="form__item">
+                        <label for="cities">Город вылета</label>
+                        <select name="cities" id="cities" form="form">
+                            <option value="St. Petersburg">Санкт-Петербург</option>
+                            <option value="Moscow">Москва</option>
+                        </select>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form__item">
+                        <label for="countries">Страна</label>
+                        <select name="countries" id="countries" form="form">
+                            <option value="Russia">Россия</option>
+                            <option value="Belarus">Беларусь</option>
+                        </select>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form__item form__item-date">
+                        <label for="date">Дата прибытия</label>
+                        <input type="date" id="date" name="date" value="2021-10-18" required>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form__item">
+                        <label for="nights">Ночей</label>
+                        <input type="number" name="nights" id="nights" value="6" required>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form__item">
+                        <label for="tourists">Туристы</label>
+                        <input type="number" name="tourists" id="tourists" value="2" required>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <button type="submit" class="btn search__btn">
+                        Найти
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="container">
+                <h2 class="section__title">
+                    Контакты
+                </h2>
+
+                <div class="contacts__grid">
+                    <div class="contacts__info">
+                        <div class="contacts__item">
+                            <div class="contacts__info-title">Адрес</div>
+                            <address class="contacts__info-subtitle">Москва, улица Юности, дом 5 строение 4, офис 2</address>
+                        </div>
+
+                        <div class="contacts__divider"></div>
+
+                        <div class="contacts__item">
+                            <div class="contacts__info-title">Телефоны</div>
+                            <div class="contacts__info-subtitle">
+                                <a href="tel:+74995356434" class="contacts__link">+7 (499) 535-64-34</a>
+                                <a href="tel:+74950050544" class="contacts__link">+7 (495) 005-05-44</a>
+                            </div>
+                        </div>
+
+                        <div class="contacts__divider"></div>
+
+                        <div class="contacts__item">
+                            <div class="contacts__info-title">E-mail</div>
+                            <div class="contacts__info-subtitle">
+                                <a href="mailto:lg.oona@mail.ru" class="contacts__link">lg.oona@mail.ru</a>
+                                <span>по вопросам бронирования</span>
+                                <a href="mailto:hotels.ln@mail.ru" class="contacts__link">hotels.ln@mail.ru</a>
+                                <span>по вопросам сотрудничества</span>
+                            </div>
+                        </div>
+
+                        <div class="contacts__divider"></div>
+
+                        <div class="contacts__item">
+                            <div class="contacts__info-title">График</div>
+                            <div class="contacts__info-subtitle">
+                                Понедельник - пятница,
+                                <br> 
+                                с 10:00 до 19:00
+                            </div>
+                        </div>
+
+                        <div class="contacts__divider"></div>
+
+                        <a href="#" class="btn contacts__btn">Построить маршрут</a>
+
+                    </div>
+
+                    <div class="contacts__photo">
+                        <img src="/img/contacts_img.png" alt="Контакты" class="contacts__img">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__item">
+                    © 2012-2020 Управляющая компания Объединенной сети «Лагуна Хотелс»
+                </div>
+
+                <div class="footer__item">
+                    <address class="footer__address">11710, улица Юности, дом 5 строение 4, офис 2</address>
+                    <a href="tel:+74995356434" class="footer__link">+7 (499) 535-64-34</a>
+                    <a href="tel:+74950050544" class="footer__link">+7 (495) 005-05-44</a>
+                </div>
+
+                <div class="footer__item">
+                    Представленная на сайте информация носит справочный характер <br> и не является публичной офертой
+                </div>
+
+                <div class="footer__item">
+                    <a href="mailto:lg.oona@mail.ru" class="footer__link">lg.oona@mail.ru</a>
+                    <a href="mailto:hotels.ln@mail.ru" class="footer__link">hotels.ln@mail.ru</a>
+                </div>
+
+                <div class="footer__item footer__item-agreement">
+                    <a href="#" class="footer__link">Пользовательское соглашение</a>
+                </div>
+
+                <div class="footer__logo">
+                    <img src="/img/footer_logo.png" alt="Lagoona" class="footer__img">
+                </div>
+
+                <div class="footer__social">
+                    <div class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="/icons/social/ping_icon.svg" alt="Ping" class="footer__social-icon">
+                        </a>
+                    </div>
+                    <div class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="/icons/social/twitter_icon.svg" alt="Twitter" class="footer__social-icon">
+                        </a>
+                    </div>
+                    <div class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="/icons/social/facebook_icon.svg" alt="Facebook" class="footer__social-icon">
+                        </a>
+                    </div>
+                    <div class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="/icons/social/vk_icon.svg" alt="VK" class="footer__social-icon">
+                        </a>
+                    </div>
+                    <div class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="/icons/social/instagram_icon.svg" alt="Instagram" class="footer__social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
