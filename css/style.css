@@ -53,6 +53,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    transition: color .3s ease;
 }
 
 .container {
@@ -150,11 +151,15 @@ a {
     font-size: 16px;
     line-height: 16px;
     color: var(--main-color);
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
 }
 
 .btn:hover {
     background-color: var(--main-color);
     color: #FFF;
+    transform: translateY(1px);
 }
 
 .section__title {
@@ -239,7 +244,13 @@ a {
     font-size: 16px;
     color: #FFCC66;
     padding-right: 13px;
-	background: url("../icons/right_icon.svg") right center / 11px 11px no-repeat;
+	background: url("/icons/right_icon.svg") right center / 11px 11px no-repeat;
+    transition: background .1s ease;
+}
+
+.special__item-link:hover {
+    color: white;
+    background:url('/icons/right_icon-hover.svg') right center / 11px 11px no-repeat;
 }
 
 /* About */
@@ -406,6 +417,15 @@ a {
     color: #FFFFFF;
     padding-right: 20px;
 	background: url("../icons/right-white_icon.svg") right center / 11px no-repeat;
+}
+
+.placement__link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
 }
 
 /* Tour */
