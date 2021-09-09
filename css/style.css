@@ -519,6 +519,35 @@ select {
     transform: translateY(-1px);
 }
 
+.choices {
+    width: 170px;
+}
+
+.choices[data-type*=select-one]:after {
+    right: 0;
+}
+
+.choices__inner {
+    padding-left: 0;
+    background-color: inherit;
+    border: none;
+}
+
+.choices__item,
+.choices__item--selectable {
+    padding: 3px 0;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.choices__list--dropdown .choices__item {
+    padding-right: 0;
+}
+
+.choices__list--dropdown {
+    border: none;
+}
 /* Contacts */
 
 .contacts {
